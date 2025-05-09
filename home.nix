@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./home/apps/git
+    ./home/apps/slack
+  ];
+
   home.username = "aamorim";
   home.homeDirectory = "/home/aamorim";
 
@@ -28,22 +33,12 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
    google-chrome
-   slack
    ghostty
    zsh
    nodejs
    vscode
+   slack
   ];
-
-  # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "aAmorim27";
-    userEmail = "amorim.andre27@gmail.com";
-    extraConfig = {
-	init.defaultBranch = "main";
-    };
-  };
   
   programs.bash = {
     enable = true;
