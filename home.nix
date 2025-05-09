@@ -3,7 +3,11 @@
 {
   imports = [
     ./home/apps/git
+    ./home/apps/google-chrome
+    ./home/apps/nodejs
     ./home/apps/slack
+    ./home/apps/vscode
+    ./home/apps/zsh
   ];
 
   home.username = "aamorim";
@@ -32,12 +36,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-   google-chrome
    ghostty
-   zsh
-   nodejs
-   vscode
-   slack
   ];
   
   programs.bash = {
