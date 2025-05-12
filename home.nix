@@ -39,14 +39,15 @@
    ghostty
   ];
   
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
-    # TODO add your custom bashrc here
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-    '';
-  };
+  #programs.bash = {
+  #  enable = true;
+  #  enableCompletion = true;
+  #  # TODO add your custom bashrc here
+  #  bashrcExtra = ''
+  #    export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+  #  '';
+  #};
+
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
