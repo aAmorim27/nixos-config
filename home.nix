@@ -8,6 +8,7 @@
     ./home/apps/slack
     ./home/apps/vscode
     ./home/apps/spotify
+    #./home/apps/webstorm
     ./home/apps/zsh
   ];
 
