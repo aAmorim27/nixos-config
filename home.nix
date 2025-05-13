@@ -7,6 +7,7 @@
     ./home/apps/nodejs
     ./home/apps/slack
     ./home/apps/vscode
+    ./home/apps/spotify
     ./home/apps/zsh
   ];
 
