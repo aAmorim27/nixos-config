@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix/release-24.11";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
@@ -15,8 +16,8 @@
       aamorim-latitude = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          inputs.stylix.nixosModules.stylix
           ./configuration.nix
-
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
           home-manager.nixosModules.home-manager
@@ -28,6 +29,7 @@
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
+
         ];
       };
     };
