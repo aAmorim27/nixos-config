@@ -12,6 +12,7 @@
     ./home/apps/volta
     ./home/apps/vscode
     ./home/apps/spotify
+    ./home/apps/terraform
     ./home/apps/webstorm
     ./home/apps/zoom
     ./home/apps/zsh
