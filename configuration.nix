@@ -102,4 +102,8 @@
     pkgs.stdenv.cc.cc
     pkgs.libgcc
   ];
+
+  fonts.packages = with pkgs; [
+    meslo-lgs-nf
+  ];
 }
