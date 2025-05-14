@@ -4,10 +4,9 @@
   imports = [
     ./home/apps/git
     ./home/apps/google-chrome
-    ./home/apps/nodejs
-    ./home/apps/pnpm
     ./home/apps/slack
     ./home/apps/stylix
+    ./home/apps/volta
     ./home/apps/vscode
     ./home/apps/spotify
     ./home/apps/webstorm

@@ -95,4 +95,11 @@
   system.stateVersion = "24.11"; # Did you read the comment?
   
   stylix.image = ./wallpapers/wall.png;
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    pkgs.zlib
+    pkgs.stdenv.cc.cc
+    pkgs.libgcc
+  ];
 }

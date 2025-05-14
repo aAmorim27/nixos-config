@@ -25,6 +25,8 @@
       theme= "powerlevel10k/powerlevel10k";
     };
     initExtra = ''
+      export VOLTA_HOME="$HOME/.volta"
+      export PATH="$VOLTA_HOME/bin:$PATH"
       source ~/.p10k.zsh
     '';
   };
