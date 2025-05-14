@@ -6,6 +6,7 @@
     ./home/apps/go
     ./home/apps/google-chrome
     ./home/apps/kitty
+    ./home/apps/rust
     ./home/apps/slack
     ./home/apps/stylix
     ./home/apps/volta

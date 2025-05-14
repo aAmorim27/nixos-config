@@ -63,6 +63,7 @@
      wget
      git
      zsh
+     gcc
   ];
 
   environment.variables.EDITOR = "vim";
