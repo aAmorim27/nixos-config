@@ -3,6 +3,7 @@
 {
   imports = [
     ./home/apps/git
+    ./home/apps/go
     ./home/apps/google-chrome
     ./home/apps/kitty
     ./home/apps/slack
