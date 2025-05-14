@@ -13,6 +13,7 @@
     ./home/apps/vscode
     ./home/apps/spotify
     ./home/apps/webstorm
+    ./home/apps/zoom
     ./home/apps/zsh
     ./home/desktops/gnome
   ];
