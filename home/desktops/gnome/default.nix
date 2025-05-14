@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     gnomeExtensions.dock-from-dash
-    gnomeExtensions.system-monitor
   ];
 
   dconf.settings = {
@@ -10,7 +9,6 @@
       disable-user-extensions = false;
       enabled-extensions = [
         "dock-from-dash@fthx"
-        "system-monitor"
       ];
     };
     "org/gnome/desktop/interface" = {
@@ -19,9 +17,6 @@
     };
     "org/gnome/desktop/sound" = {
       event-sounds= false;
-    };
-    "org/gnome/shell/extensions/system-monitor"= {
-      enabled = true;
     };
   };
 }
