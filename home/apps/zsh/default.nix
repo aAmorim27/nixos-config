@@ -1,6 +1,6 @@
-{pkgs, ...}:
+{pkgs, config, ...}:
 {
-  home.file.".zsh/plugins/you-should-use" = {
+  home.file.".oh-my-zsh/plugins/you-should-use" = {
     source = pkgs.fetchFromGitHub {
       owner = "MichaelAquilina";
       repo = "zsh-you-should-use";
@@ -9,8 +9,12 @@
     };
   };
   
-  home.file.".zsh/themes/powerlevel10k" = {
+  home.file.".oh-my-zsh/themes/powerlevel10k" = {
     source = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
+  };
+  
+  home.file.".p10k.zsh" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/aamorim/nixos-config/home/dotfiles/.p10k.zsh";
   };
 
   programs.zsh = {
@@ -21,7 +25,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "nvm" "docker-compose" "docker" "you-should-use"];
-      custom= "$HOME/.zsh";
+      custom= "$HOME/.oh-my-zsh";
       theme= "powerlevel10k/powerlevel10k";
     };
     initExtra = ''
