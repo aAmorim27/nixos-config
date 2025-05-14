@@ -5,11 +5,12 @@
     ./home/apps/git
     ./home/apps/google-chrome
     ./home/apps/nodejs
+    ./home/apps/pnpm
     ./home/apps/slack
     ./home/apps/stylix
     ./home/apps/vscode
     ./home/apps/spotify
-    #./home/apps/webstorm
+    ./home/apps/webstorm
     ./home/apps/zsh
     ./home/desktops/gnome
   ];
@@ -31,12 +32,6 @@
   # home.file.".xxx".text = ''
   #     xxx
   # '';
-
-  # set cursor size and dpi for 4k monitor
-  #xresources.properties = {
-  #  "Xcursor.size" = lib.mkDefault 16;
-  #  "Xft.dpi" = lib.mkDefault 172;
-  #};
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
