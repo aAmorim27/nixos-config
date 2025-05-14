@@ -21,7 +21,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "nvm" "docker-compose" "docker" "you-should-use"];
-      custom= ".zsh";
+      custom= "$HOME/.zsh";
       theme= "powerlevel10k/powerlevel10k";
     };
     initExtra = ''
