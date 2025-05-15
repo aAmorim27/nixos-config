@@ -1,11 +1,13 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib,nixvim, ... }:
 
 {
   imports = [
+    nixvim.homeManagerModules.nixvim
     ./home/apps/git
     ./home/apps/go
     ./home/apps/google-chrome
     ./home/apps/kitty
+    ./home/apps/neovim
     ./home/apps/rust
     ./home/apps/slack
     ./home/apps/stylix
