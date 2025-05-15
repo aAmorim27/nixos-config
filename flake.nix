@@ -9,13 +9,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix.url = "github:danth/stylix/release-24.11";
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
+    nvf = {
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nixvim, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nvf, ... }: {
     nixosConfigurations = {
       aamorim-latitude = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -30,7 +30,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {
-              inherit nixvim;
+              inherit nvf;
             };
 
             home-manager.users.aamorim = import ./home.nix;

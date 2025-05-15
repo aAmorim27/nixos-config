@@ -1,8 +1,8 @@
-{ config, pkgs, lib,nixvim, ... }:
+{ config, pkgs, lib,nvf, ... }:
 
 {
   imports = [
-    nixvim.homeManagerModules.nixvim
+    nvf.homeManagerModules.default
     ./home/apps/git
     ./home/apps/go
     ./home/apps/google-chrome
