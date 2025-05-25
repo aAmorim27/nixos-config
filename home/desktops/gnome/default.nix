@@ -2,17 +2,19 @@
 with lib.hm.gvariant;
 {
   home.packages = with pkgs; [
-    gnomeExtensions.dock-from-dash
+    gnomeExtensions.dash-to-dock
     gnomeExtensions.open-bar
+    gnomeExtensions.blur-my-shell
   ];
   dconf.enable = true;
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = [
-        "dock-from-dash@fthx"
+        "dash-to-dock@micxgx.gmail.com"
         "openbar@neuromorph"
         "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        "blur-my-shell@aunetx"
       ];
     };
     "org/gnome/desktop/interface" = {
