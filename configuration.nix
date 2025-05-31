@@ -30,7 +30,20 @@
   services.gnome = {
     games.enable = false;
   };
-  environment.gnome.excludePackages = with pkgs; [ gnome-tour ];
+  environment.gnome.excludePackages = with pkgs; [ 
+    gnome-tour
+    cheese
+    epiphany
+    yelp
+    geary
+    seahorse
+    gnome-clocks 
+    gnome-contacts
+    gnome-maps 
+    gnome-music 
+    gnome-weather
+    gnome-connections
+  ];
   services.xserver.excludePackages = [ pkgs.xterm ];
   # Configure keymap in X11
   services.xserver.xkb = {
