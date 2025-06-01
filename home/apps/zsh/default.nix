@@ -28,7 +28,7 @@
       custom= "$HOME/.oh-my-zsh";
       theme= "powerlevel10k/powerlevel10k";
     };
-    initExtra = ''
+    initContent = ''
       export VOLTA_HOME="$HOME/.volta"
       export PATH="$VOLTA_HOME/bin:$PATH"
       source ~/.p10k.zsh

@@ -23,8 +23,8 @@
 
   home.username = "aamorim";
   home.homeDirectory = "/home/aamorim";
-
-  # This value determines the home Manager release that your
+  
+# This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
   # incompatible changes.

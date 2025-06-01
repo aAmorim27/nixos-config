@@ -5,6 +5,7 @@ with lib.hm.gvariant;
     gnomeExtensions.dash-to-dock
     gnomeExtensions.open-bar
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.system-monitor
   ];
   dconf.enable = true;
   dconf.settings = {
