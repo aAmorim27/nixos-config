@@ -62,7 +62,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aamorim = {
     isNormalUser = true;
-    description = "André Amorim";
+    description = "André AMORIM";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
@@ -110,15 +110,15 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
   
   stylix.image = ./wallpapers/wall.png;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    pkgs.zlib
-    pkgs.stdenv.cc.cc
-    pkgs.libgcc
+    zlib
+    stdenv.cc.cc
+    libgcc
   ];
 
   fonts.packages = with pkgs; [

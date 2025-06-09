@@ -55,5 +55,8 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/system-monitor" = {
       show-swap = false;
     };
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "minimize,maximize,close";
+    };
   };
 }
