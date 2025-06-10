@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -15,12 +16,14 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nvf, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nvf, nixos-hardware, ... }: {
     nixosConfigurations = {
       aamorim-latitude = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           inputs.stylix.nixosModules.stylix
+          # TODO: TO MOVE ONCE CONFIGS PER HOSTS ARE DONE
+          nixos-hardware.nixosModules.dell-latitude-7420
           ./configuration.nix
           # inputs.nvf.homeManagerModules.default
           # make home-manager as a module of nixos
