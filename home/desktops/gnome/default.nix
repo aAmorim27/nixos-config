@@ -56,7 +56,7 @@ with lib.hm.gvariant;
       show-swap = false;
     };
     "org/gnome/desktop/wm/preferences" = {
-      button-layout = "minimize,maximize,close";
+      button-layout = "menu:minimize,maximize,close";
     };
   };
 }
