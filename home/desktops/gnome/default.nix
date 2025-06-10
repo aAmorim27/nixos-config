@@ -55,6 +55,9 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/system-monitor" = {
       show-swap = false;
     };
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      show-icons-notifications-counter = false;
+    };
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "menu:minimize,maximize,close";
     };
