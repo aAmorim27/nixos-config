@@ -3,7 +3,9 @@
 {
   imports = [
     nvf.homeManagerModules.default
+    ./home/apps/cursor
     ./home/apps/fastfetch
+    ./home/apps/gh
     ./home/apps/git
     ./home/apps/go
     ./home/apps/google-chrome
