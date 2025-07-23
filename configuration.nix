@@ -15,6 +15,7 @@
       ./core/locale.nix
       ./core/network.nix
       ./core/printer.nix
+      ./core/udev.nix
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
