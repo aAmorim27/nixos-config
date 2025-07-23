@@ -13,6 +13,7 @@
     ./home/apps/mkcert
     ./home/apps/neovim
     ./home/apps/rust
+    ./home/apps/rust-rover
     ./home/apps/slack
     ./home/apps/stylix
     ./home/apps/volta
