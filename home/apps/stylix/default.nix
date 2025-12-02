@@ -1,7 +1,8 @@
-{pkgs,...}:
+{ pkgs, ... }:
 {
   stylix = {
     enable = true;
+    image = ../../../wallpapers/wall.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
     cursor = {
        name = "Adwaita";

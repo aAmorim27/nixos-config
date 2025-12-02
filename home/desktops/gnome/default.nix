@@ -7,6 +7,13 @@ with lib.hm.gvariant;
     gnomeExtensions.blur-my-shell
     gnomeExtensions.system-monitor
   ];
+  stylix = {
+    targets = {
+      qt = {
+        platform = lib.mkForce "qtct";
+      };
+    };
+  };
   dconf.enable = true;
   dconf.settings = {
     "org/gnome/shell" = {

@@ -26,8 +26,8 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.gnome = {
     games.enable = false;
   };
@@ -114,8 +114,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
   
-  stylix.image = ./wallpapers/wall.png;
-
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     zlib
