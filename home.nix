@@ -4,6 +4,7 @@
   imports = [
     nvf.homeManagerModules.default
     ./home/apps/cursor
+    ./home/apps/direnv
     ./home/apps/fastfetch
     ./home/apps/gh
     ./home/apps/git
