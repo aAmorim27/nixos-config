@@ -17,9 +17,13 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    peon-ping = {
+      url = "github:PeonPing/peon-ping";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nvf, nixos-hardware, stylix, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nvf, peon-ping, nixos-hardware, stylix, ... }: {
     nixosConfigurations = {
       aamorim-latitude = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -38,6 +42,7 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = {
               inherit nvf;
+              inherit peon-ping;
             };
 
             home-manager.users.aamorim = import ./home.nix;

@@ -1,8 +1,9 @@
-{ config, pkgs, lib,nvf, ... }:
+{ config, pkgs, lib, nvf, peon-ping, ... }:
 
 {
   imports = [
     nvf.homeManagerModules.default
+    peon-ping.homeManagerModules.default
     ./home/apps/cursor
     ./home/apps/direnv
     ./home/apps/fastfetch
@@ -13,6 +14,8 @@
     ./home/apps/kitty
     ./home/apps/mkcert
     ./home/apps/neovim
+    ./home/apps/obsidian
+    ./home/apps/peon-ping
     ./home/apps/rust
     ./home/apps/rust-rover
     ./home/apps/slack
