@@ -1,9 +1,11 @@
-{ config, pkgs, lib, nvf, peon-ping, ... }:
+{ config, pkgs, lib, nvf, peon-ping, niri, noctalia, ... }:
 
 {
   imports = [
     nvf.homeManagerModules.default
     peon-ping.homeManagerModules.default
+    niri.homeModules.niri
+    noctalia.homeModules.default
     ./home/apps/cursor
     ./home/apps/direnv
     ./home/apps/fastfetch
@@ -14,6 +16,8 @@
     ./home/apps/kitty
     ./home/apps/mkcert
     ./home/apps/neovim
+    ./home/apps/niri
+    ./home/apps/noctalia
     ./home/apps/obsidian
     ./home/apps/peon-ping
     ./home/apps/rust

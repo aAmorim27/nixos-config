@@ -21,9 +21,19 @@
       url = "github:PeonPing/peon-ping";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nvf, peon-ping, nixos-hardware, stylix, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, nvf, peon-ping, nixos-hardware, stylix, niri, noctalia, ... }: {
     nixosConfigurations = {
       aamorim-latitude = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -43,6 +53,8 @@
             home-manager.extraSpecialArgs = {
               inherit nvf;
               inherit peon-ping;
+              inherit niri;
+              inherit noctalia;
             };
 
             home-manager.users.aamorim = import ./home.nix;

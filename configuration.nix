@@ -27,9 +27,12 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland = true;
   services.desktopManager.gnome.enable = true;
+  programs.niri.enable = true;
   services.gnome = {
     games.enable = false;
+    gnome-keyring.enable = true;
   };
   environment.gnome.excludePackages = with pkgs; [ 
     gnome-tour
