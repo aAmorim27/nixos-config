@@ -64,6 +64,8 @@
       };
       general = {
         language="en";
+        lockScreenAnimations=true;
+        lockScreenBlur=0.7;
       };
       location = {
         name = "Paris, France";
@@ -95,6 +97,13 @@
             id="media-sysmon-card";
           }
         ];
+      };
+      appLauncher = {
+        terminalCommand= "kitty -e";
+      };
+      audio= {
+        volumeFeedback=true;
+        preferredPlayer="spotify";
       };
       colorSchemes.predefinedScheme = "Catppuccin";
     };

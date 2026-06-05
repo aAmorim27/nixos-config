@@ -18,6 +18,49 @@ in
           ];
         }
       ];
+      debug={
+        honor-xdg-activation-with-invalid-serial = [];
+      };
+      layout= {
+        gaps=16;
+        focus-ring={
+          active={
+            color= "#fab387";
+          };
+        };
+        preset-column-widths = [
+          { proportion = 1.0 / 2.0; }
+          { proportion = 1.0 / 3.0; }
+          { proportion = 2.0 / 3.0; }
+          { proportion = 1.0 / 4.0; }
+        ];
+        preset-window-heights = [
+          { proportion = 1.0 / 2.0; }
+          { proportion = 1.0 / 3.0; }
+          { proportion = 2.0 / 3.0; }
+          { proportion = 1.0 / 4.0; }
+        ];
+      };
+      window-rules= [
+        {
+          matches= [
+            {
+              is-focused= false;
+            }
+          ];
+          opacity=0.95;
+        }
+        {
+          matches= [];
+          geometry-corner-radius= {
+            bottom-left = 20.0;
+            bottom-right = 20.0;
+            top-left = 20.0;
+            top-right = 20.0;
+          };
+          clip-to-geometry=true;
+        }
+      ];
       environment = {
         "NIXOS_OZONE_WL" = "1";
         "DISPLAY" = ":0";
@@ -26,6 +69,10 @@ in
       outputs = {
         eDP-1 = {
            scale=1;
+           position={
+            x=0;
+            y=0;
+           };
         };
         "LG Electronics LG HDR WFHD 0x0000DF37" = {
            mode = {
@@ -36,6 +83,10 @@ in
            transform = {
               rotation = 180;
            };
+           position={
+            x=1920;
+            y=-2160;
+           };
         };
         "LG Electronics LG HDR 4K 009NTABAU480" = {
            mode = {
@@ -43,8 +94,15 @@ in
               height=2160;
               refresh=60.0;
            };
+          position={
+            x=1920;
+            y=0;
+           };
            scale=1.0;
         };
+      };
+      hotkey-overlay= {
+        skip-at-startup=true;
       };
       binds = with config.lib.niri.actions; {
         # noctalia-shell keybinds
@@ -54,7 +112,7 @@ in
         "Mod+Return".action.spawn = "kitty";
         "Mod+Space".action.spawn = noctalia "launcher toggle";
         "Mod+B".action.spawn = "google-chrome-stable";
-        "Mod+Shift+L".action.spawn = noctalia "lockScreen lock";
+        "Mod+L".action.spawn = noctalia "lockScreen lock";
         "Mod+Shift+Q".action.spawn = noctalia "sessionMenu toggle";
 
         # Media Controls
@@ -104,13 +162,9 @@ in
         # --- Window Movement and Focus ---
         "Mod+Q".action = close-window;
         "Mod+Left".action = focus-column-left;
-        "Mod+H".action = focus-column-left;
         "Mod+Right".action = focus-column-right;
-        "Mod+L".action = focus-column-right;
         "Mod+Up".action = focus-window-up;
-        "Mod+K".action = focus-window-up;
         "Mod+Down".action = focus-window-down;
-        "Mod+J".action = focus-window-down;
 
         "Mod+CTRL+Left".action = move-column-left;
         "Mod+CTRL+H".action = move-column-left;
@@ -185,9 +239,7 @@ in
         "Mod+W".action = toggle-column-tabbed-display;
 
         # --- Screenshots ---
-        "CTRL+Shift+1".action.screenshot = [ ];
-        "CTRL+Shift+2".action.screenshot-screen = [ ];
-        "CTRL+Shift+3".action.screenshot-window = [ ];
+        "Print".action.screenshot = [ ];
 
         # --- Emergency Escape ---
         "Mod+ESCAPE" = {

@@ -22,6 +22,7 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 

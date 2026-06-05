@@ -10,8 +10,8 @@
        size = 16;
     };
     polarity = "dark";
-    opacity = {
-      terminal= 0.8;
-    };
+    #opacity = {
+    #  terminal= 0.8;
+    #};
   };
 }
